@@ -1,6 +1,34 @@
 /* Trabajo de Titulación */
 /* Arduino Recolector de Datos*/
 
+// Interfaz para inicializar los componentes.
+class IInicializador {
+    public:
+        virtual void init() = 0;
+        virtual ~IInicializador() {}
+    };
+    
+    // Interfaz para el Observador en el patrón Observator.
+    class Observador {
+    public:
+        virtual void update(const String& sensor, const String& valor) = 0;
+        virtual ~Observador() {}
+    };
+
+    // Interfaz para inicializar los componentes.
+class IInicializador {
+    public:
+        virtual void init() = 0;
+        virtual ~IInicializador() {}
+    };
+    
+    // Interfaz para el Observador en el patrón Observator.
+    class Observador {
+    public:
+        virtual void update(const String& sensor, const String& valor) = 0;
+        virtual ~Observador() {}
+    };
+
 // --- Librerias a utilizar ---//
 #include <Wire.h> // Para I2C
 #include <BH1750.h> // Para el sensor de luz BH1750
